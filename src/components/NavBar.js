@@ -5,12 +5,12 @@ import { SlSocialLinkedin } from "react-icons/sl";
 import { SlSocialInstagram } from "react-icons/sl";
 
 export const NavBar = () => {
-  const [activelink, setlink] = useState("");
+  const [activelink, setlink] = useState("home");
   const [scrolled,setscolled] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 10) {
         setscolled(true);
       } else {
         setscolled(false);
@@ -25,7 +25,7 @@ export const NavBar = () => {
   };
 
   return (
-    <div className={`nav-container p-5 bg-transparent w-[100vw] ${scrolled ? 'fixed ' : ''}  backdrop backdrop-blur-md  flex`}>
+    <div className={`nav-container z-50 p-5 transition-all duration-100 bg-transparent w-[100vw] ${scrolled ? 'fixed ' : ''}  backdrop backdrop-blur-md  flex`}>
       <div className="logo w-fit text-2xl">Adnan Ashraf</div>
       <div className="pages ml-[50px]  justify-start items-center flex">
         <ul className="flex text-xl gap-5">
@@ -34,7 +34,7 @@ export const NavBar = () => {
               onClick={() => {
                 onUpdateLink("home");
               }}
-              className={` hover:text-cyan-300 transition-all duration-250`}
+              className={` ${activelink ==='home' ? 'border-b-2 border-gray-100' : ""} hover:text-cyan-300 transition-all duration-250`}
               to="home" smooth={true} duration={500}
             >
               Home
@@ -43,9 +43,9 @@ export const NavBar = () => {
           <li>
             <Link
               onClick={() => {
-                
+                onUpdateLink("skill");
               }}
-              className={`hover:text-cyan-300 transition-all duration-250`}
+              className={` ${activelink ==='skill' ? 'border-b-2 border-gray-100' : ""}hover:text-cyan-300 transition-all duration-250`}
               to="skill" smooth={true} duration={500}
             >
               Skills
@@ -56,7 +56,7 @@ export const NavBar = () => {
               onClick={() => {
                 onUpdateLink("project");
               }}
-              className={` hover:text-cyan-300 transition-all duration-250`}
+              className={`${activelink ==='project' ? 'border-b-2 border-gray-100' : ""} hover:text-cyan-300 transition-all duration-250`}
               to="project" smooth={true} duration={500}
             >
               Projects

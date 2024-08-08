@@ -4,6 +4,8 @@ import vector from "../assets/vector-4k.png";
 import Typewriter from "typewriter-effect";
 import "./home.css";
 import { Skills } from "./Skills";
+import { Projects } from "./projects";
+
 
 export const Home = () => {
   return (
@@ -39,6 +41,10 @@ export const Home = () => {
         </div>
       </div>
       <Skills/>
+      <Projects/>
     </Layout>
   );
 };
+
+
+
