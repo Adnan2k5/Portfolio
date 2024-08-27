@@ -1,10 +1,12 @@
 import React from "react";
 import { Layout } from "../layout/Layout";
-import vector from "../assets/vector-4k.png";
-import Typewriter from "typewriter-effect";
+// import vector from "../assets/vector-4k.png";
+// import Typewriter from "typewriter-effect";
 import "./home.css";
 import { Skills } from "./Skills";
 import { Projects } from "./projects";
+import {Typewriter} from "typewriter-effect";
+
 
 
 export const Home = () => {
@@ -20,22 +22,22 @@ export const Home = () => {
               <Typewriter
                 className="ml-5"
                 options={{
-                  strings: [" Web Developer",  " AI/ML"],
+                  strings: ["MERN Stack",  " AI/ML" , "4 * HackerRank"],
                   autoStart: true,
                   loop: true,
                 }}
               />
             </div>
-            <p className="text-lg mt-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />{" "}
-              Quisquam, voluptas?
-            </p>
+            <h1 className="text-xl mt-5">
+              B. Tech Cse <br />{" "}
+              KL University
+            </h1>
           </div>
         </div>
         <div className="vector-side  relative -ml-[12rem] -z-10  flex justify-start  h-[80vh]">
           <img
             className="w-full h-full rounded-full object-cover"
-            src={vector}
+            src=""
             alt="vector"
           ></img>
         </div>

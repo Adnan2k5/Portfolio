@@ -48,3 +48,11 @@ body {
 
 
 
+
+
+.skill-box{
+  border-radius: 40px;
+  background: #1c1c1c;
+  box-shadow:  -35px 35px 100px #121212,
+              35px -35px 100px #262626;
+}
